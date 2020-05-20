@@ -2,9 +2,7 @@ package api.server;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collection;
 import java.util.Enumeration;
-import java.util.Iterator;
 import java.util.Locale;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -13,7 +11,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 
 /**
  * Servlet implementation class GetClientConnectionInfo
@@ -22,12 +19,12 @@ import javax.servlet.http.Part;
 public class GetClientConnectionInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public GetClientConnectionInfo() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor. 
+	 */
+	public GetClientConnectionInfo() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Servlet#init(ServletConfig)
@@ -95,16 +92,16 @@ public class GetClientConnectionInfo extends HttpServlet {
 		out.println("http path info : " + request.getPathInfo() + "<br />");
 		out.println("http path translated : " + request.getPathTranslated() + "<br />");
 		out.println("http query string : " + request.getQueryString() + "<br />");
-		out.println("http remote addr : " + request.getRemoteAddr()  + "<br />");
-		out.println("http remote host : " + request.getRemoteHost()  + "<br />");
-		out.println("http remote port : " + request.getRemotePort()  + "<br />");
-		out.println("http remote user : " + request.getRemoteUser()  + "<br />");
-		out.println("http request session id : " + request.getRequestedSessionId()  + "<br />");
-		out.println("http request uri : " + request.getRequestURI()  + "<br />");
-		out.println("http scheme : " + request.getScheme()  + "<br />");
-		out.println("http server name : " + request.getServerName()  + "<br />");
-		out.println("http server port : " + request.getServerPort()  + "<br />");
-		out.println("http servlet path : " + request.getServletPath()  + "<br />");
+		out.println("http remote addr : " + request.getRemoteAddr() + "<br />");
+		out.println("http remote host : " + request.getRemoteHost() + "<br />");
+		out.println("http remote port : " + request.getRemotePort() + "<br />");
+		out.println("http remote user : " + request.getRemoteUser() + "<br />");
+		out.println("http request session id : " + request.getRequestedSessionId() + "<br />");
+		out.println("http request uri : " + request.getRequestURI() + "<br />");
+		out.println("http scheme : " + request.getScheme() + "<br />");
+		out.println("http server name : " + request.getServerName() + "<br />");
+		out.println("http server port : " + request.getServerPort() + "<br />");
+		out.println("http servlet path : " + request.getServletPath() + "<br />");
 		out.println("http isAsyncStarted : " + request.isAsyncStarted() + "<br />");
 		out.println("http isAsyncSupported : " + request.isAsyncSupported() + "<br />");
 		out.println("http isRequestedSessionIdFromCookie : " + request.isRequestedSessionIdFromCookie() + "<br />");
@@ -112,10 +109,10 @@ public class GetClientConnectionInfo extends HttpServlet {
 		out.println("http isRequestedSessionIdValid : " + request.isRequestedSessionIdValid() + "<br />");
 		out.println("http isSecure : " + request.isSecure() + "<br />");
 		out.println("http isTrailerFieldsReady : " + request.isTrailerFieldsReady() + "<br />");
-		out.println("http BASIC_AUTH : " + HttpServletRequest.BASIC_AUTH  + "<br />");
-		out.println("http CLIENT_CERT_AUTH : " + HttpServletRequest.CLIENT_CERT_AUTH  + "<br />");
-		out.println("http DIGEST_AUTH : " + HttpServletRequest.DIGEST_AUTH  + "<br />");
-		out.println("http FORM_AUTH : " + HttpServletRequest.FORM_AUTH  + "<br />");
+		out.println("http BASIC_AUTH : " + HttpServletRequest.BASIC_AUTH + "<br />");
+		out.println("http CLIENT_CERT_AUTH : " + HttpServletRequest.CLIENT_CERT_AUTH + "<br />");
+		out.println("http DIGEST_AUTH : " + HttpServletRequest.DIGEST_AUTH + "<br />");
+		out.println("http FORM_AUTH : " + HttpServletRequest.FORM_AUTH + "<br />");
 		out.println("----- headers from request / client -----<br />");
 		Enumeration<String> headerNames = request.getHeaderNames();
 		String headerName = "", headerValue = "";
